@@ -1,0 +1,15 @@
+import requests
+import pandas as pd
+import numpy as np
+%matplotlib inline 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+mpl.style.use('ggplot')
+from bs4 import BeautifulSoup
+
+
+url = 'https://www.skysports.com/world-cup-table'
+
+page = requests.get(url)
+print(page)
+soup = BeautifulSoup(page.text, 'html.parser')
